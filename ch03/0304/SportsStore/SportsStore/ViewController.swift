@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
-    
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var totalStockLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -36,10 +35,12 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         //self.tableView = UITableView.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 50))
         self.tableView.dataSource = self
+        self.tableView.delegate = self
         
-        self.tableView.register(ProductTableCell.self, forCellReuseIdentifier: "ProductCell")
+        //self.tableView.register(ProductTableCell.self, forCellReuseIdentifier: "ProductCell")
         
-        //self.addSub
+        // 设置表视图的表脚视图
+        tableView.tableFooterView = UIView()
     }
 
     func displayStockTotal() {
@@ -53,19 +54,18 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let indentifier = "ProductCell"
+        let indentifier = "ProductTableCell"
         var cell = tableView.dequeueReusableCell(withIdentifier: indentifier) as? ProductTableCell
         if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: indentifier) as? ProductTableCell
+            cell = Bundle.main.loadNibNamed("ProductTableCell", owner: self, options: nil)?.last as? ProductTableCell
+            let product = products[indexPath.row];
+            cell?.productId = indexPath.row;
+            cell?.nameLabel?.text = product.0;
+            cell?.descriptionLabel?.text = product.1;
+            cell?.stockStepper?.value = Double(product.4);
+            cell?.stockField?.text = String(product.4);
         }
-        let product = products[indexPath.row];
-        //let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell")
-       //     as! ProductTableCell;
-        cell?.productId = indexPath.row;
-        cell?.nameLabel?.text = product.0;
-        cell?.descriptionLabel?.text = product.1;
-        cell?.stockStepper?.value = Double(product.4);
-        cell?.stockField?.text = String(product.4);
+
         return cell!;
     }
 }
