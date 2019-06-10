@@ -12,6 +12,8 @@
 		3F631E9222AE41F600FDBCA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F631E9022AE41F600FDBCA8 /* Main.storyboard */; };
 		3F631E9422AE41FC00FDBCA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F631E9322AE41FC00FDBCA8 /* Assets.xcassets */; };
 		3F631E9722AE41FC00FDBCA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F631E9522AE41FC00FDBCA8 /* LaunchScreen.storyboard */; };
+		3F631EA022AE4B6F00FDBCA8 /* ProductTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F631E9E22AE4B6F00FDBCA8 /* ProductTableCell.swift */; };
+		3F631EA122AE4B6F00FDBCA8 /* ProductTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F631E9F22AE4B6F00FDBCA8 /* ProductTableCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		3F631E9322AE41FC00FDBCA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F631E9622AE41FC00FDBCA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F631E9822AE41FC00FDBCA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F631E9E22AE4B6F00FDBCA8 /* ProductTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableCell.swift; sourceTree = "<group>"; };
+		3F631E9F22AE4B6F00FDBCA8 /* ProductTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				3F631E9322AE41FC00FDBCA8 /* Assets.xcassets */,
 				3F631E9522AE41FC00FDBCA8 /* LaunchScreen.storyboard */,
 				3F631E9822AE41FC00FDBCA8 /* Info.plist */,
+				3F631E9E22AE4B6F00FDBCA8 /* ProductTableCell.swift */,
+				3F631E9F22AE4B6F00FDBCA8 /* ProductTableCell.xib */,
 			);
 			path = SportsStore;
 			sourceTree = "<group>";
@@ -124,6 +130,7 @@
 			files = (
 				3F631E9722AE41FC00FDBCA8 /* LaunchScreen.storyboard in Resources */,
 				3F631E9422AE41FC00FDBCA8 /* Assets.xcassets in Resources */,
+				3F631EA122AE4B6F00FDBCA8 /* ProductTableCell.xib in Resources */,
 				3F631E9222AE41F600FDBCA8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F631EA022AE4B6F00FDBCA8 /* ProductTableCell.swift in Sources */,
 				3F631E8F22AE41F600FDBCA8 /* ViewController.swift in Sources */,
 				3F631E8D22AE41F600FDBCA8 /* AppDelegate.swift in Sources */,
 			);
