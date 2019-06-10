@@ -1,4 +1,4 @@
-# ProDesignPatternsInSwift
+# Pro Design Patterns In Swift
 Pro Design Patterns In Swift
 
 
